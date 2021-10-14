@@ -53,6 +53,7 @@ module.exports = {
     res.status(200).send("Entry Deleted")
   },
   getCallApi: (req, res) => {
+  console.log("hit")
   const {searchKey} = req.params
   const options = {
     method: "GET",

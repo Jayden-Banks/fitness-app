@@ -31,7 +31,7 @@ const search = async() => {
 
 
   try {
-  const response = await axios.get(`${baseURL}call/${searchKey}`)
+  const response = await axios.get(`/api/call/${searchKey}`)
   
 
 
