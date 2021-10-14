@@ -1,4 +1,4 @@
-const baseURL = port;
+const baseURL = "/api/";
 // const baseURL = "http://localhost:4000/api/";
 let hitsArr = [] //this array holds the 10 displayed food objects on the page
 let foodList = []
