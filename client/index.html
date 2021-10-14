@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <header>
+    <div id="header-img-div"><img src="./assets/logo.png" alt="stickfigure with a cape logo"></div>
+    <div id="center-text">
+      <h2>Calorie Counter</h2>
+    </div>
+    <div id="calendar"><input id="calendar-img" type="image" src="./assets/download.png"></div>
+  </header>
+
+  <main>
+    <div id="search-food-div">
+      <div class="user-input">
+        <form class="user-form">
+          <label for="uname">User Name:</label>
+          <input id="user-name" name="uname" placeholder="Enter user name" />
+          <label for="ugoal">User Goal:</label>
+          <input id="user-goal" name="ugoal" placeholder="Enter calorie goal" />
+          <button id="user-button">Submit</button>
+        </form>
+      </div>
+      <div class="search">
+        <label for="food-search">Food:</label>
+        <input id="search-input" name="food-search" placeholder="Search for Food" />
+        <button id="search-button">Search</button>
+      </div>
+
+      <div class="hits-list"></div>
+
+    </div>
+    <div id="user-food-div">
+
+      <div class="vl"></div>
+      <div id="user-food-list">
+        <div class="user-info">
+          <h2 id="user-name-info"></h2>
+          <p id="total-calorie-display"></p>
+          <p id="user-goal-display"></p>
+          <p id="user-calorie-info"></p>
+        </div>
+        <h2 id="user-entries-h2">User Entries</h2>
+        <hr class="rounded">
+        <div class="user-foods"></div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

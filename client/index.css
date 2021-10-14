@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  border: 0px;
+  margin: 0px;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  background-color: #ed254e;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 125px;
+
+}
+
+header>div>h2 {
+  font-size: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: alloy;
+}
+
+#header-img-div>img {
+  padding-left: 10px;
+  width: 125px;
+  height: 100px;
+}
+
+#calendar {
+  width: auto;
+  height: auto;
+  color: blue;
+}
+
+#calendar>input {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+main {
+  display: flex;
+  justify-content: space-between;
+  /* height: 100%; */
+  min-height: 100%;
+  max-height: auto;
+}
+
+#search-food-div {
+  width: 66.7%;
+}
+
+#user-food-div {
+  width: 33.3%;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+#user-food-list {
+  /* background-color: aliceblue; */
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-content: center; */
+}
+
+#user-food-list>h2 {
+  font-size: 2em;
+}
+
+.user-info {
+  padding-bottom: 10px;
+}
+
+/* hr.rounded {
+  width: 150px;
+  border-top: 8px solid purple;
+  border-radius: 5px;
+  align-self: center;
+} */
+.vl {
+  margin-top: 40px;
+  border-left: 8px solid #ed254e;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hits-list>div {
+  margin-left: 10px;
+}
+
+.hits-list>div>* {
+  padding-top: 30px;
+
+}
+
+.food-list>li {
+  padding-top: 30px;
+}
+
+
+p {
+  font-size: 1.5em;
+  font-family: slab;
+}
+
+button {
+  margin-top: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 12px;
+  background-color: #ed254e;
+}
+
+input {
+  margin: 10px;
+  border-radius: 10px;
+  width: 200;
+  height: 30px;
+  font-size: 1em;
+  border: solid 2px#ed254e;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+#user-entries-h2 {
+  justify-self: center;
+  /* text-decoration: underline; */
+  border-bottom: 5px solid #ed254e;
+  border-radius: 5px;
+  /* text-decoration-color: #ed254e; */
+  text-decoration-thickness: 8px;
+  align-self: center;
+}
+
+#user-name-info {
+  border-bottom: #ed254e;
+  text-decoration: underline #ed254e;
+  text-decoration-color: #ed254e;
+  text-decoration-style: solid;
+  text-decoration-thickness: 8px;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+
+@font-face {
+  font-family: bubble;
+  src: url(./assets/bubble-rainbow-font/BubbleRainbow-VGdn0.ttf);
+}
+
+@font-face {
+  font-family: alloy;
+  src: url(./assets/a-alloy-ink-font/AlloyInk-lgdWw.otf);
+}
+
+@font-face {
+  font-family: slab;
+  src: url(./assets/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+}
