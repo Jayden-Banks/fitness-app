@@ -31,7 +31,7 @@ const search = async() => {
 
 
   try {
-  const response = await axios.get(`/api/call/${searchKey}`)
+  const response = await axios.get(baseURL + `call/${searchKey}`)
   
 
 
@@ -110,6 +110,7 @@ const createUser = e => {
     goal
   }
 
+  // axios.post('api/user', body).then(res => {
   axios.post(baseURL + 'user', body).then(res => {
     console.log(res.data)
     displayUser()

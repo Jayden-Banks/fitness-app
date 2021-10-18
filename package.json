@@ -2,6 +2,7 @@
   "name": "qa-skills",
   "version": "1.0.0",
   "description": "",
+  "proxy": "http://localhost:4000/",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",

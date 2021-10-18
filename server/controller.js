@@ -22,6 +22,7 @@ module.exports = {
   },
   // take a user and goal input and fill userObj with values. Sends string "User Accepted" back
   userEntry: (req, res) => {
+    console.log("HIT")
     const { user, goal } = req.body;
     if (user && goal) {
       userObj.userName = user;
