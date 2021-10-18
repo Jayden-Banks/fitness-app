@@ -161,10 +161,10 @@ label {
 }
 
 #user-name-info {
-  border-bottom: #ed254e;
-  text-decoration: underline #ed254e;
-  text-decoration-color: #ed254e;
-  text-decoration-style: solid;
+  border-bottom: 1px solid #ed254e;
+  /* text-decoration: underline #ed254e; */
+  /* text-decoration-color: #ed254e; */
+  /* text-decoration-style: solid; */
   text-decoration-thickness: 8px;
   font-size: 2em;
   padding-bottom: 5px;
