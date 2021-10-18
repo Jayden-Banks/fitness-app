@@ -67,6 +67,7 @@ module.exports = {
       "x-rapidapi-host": "nutritionix-api.p.rapidapi.com",
     },
   };
+
   axios
     .request(options)
     .then(function (response) {
@@ -74,7 +75,7 @@ module.exports = {
       res.status(200).send(response.data)
     }) .catch (err => {
     console.log(err) 
-    res.status(400).send(err)
+    res.status(400).send(searchKey)
     })
   }
 };
