@@ -75,7 +75,7 @@ module.exports = {
       res.status(200).send(response.data)
     }) .catch (err => {
     console.log(err) 
-    res.status(400).send(options.url)
+    res.status(400).send(options.headers["x-rapidapi-key"])
     })
   }
 };
