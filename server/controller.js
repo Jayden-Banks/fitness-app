@@ -55,8 +55,7 @@ module.exports = {
   },
   getCallApi: (req, res) => {
   console.log("hit")
-  // const {searchKey} = req.params
-  const searchKey = 'grape'
+  const {searchKey} = req.params
   const options = {
     method: "GET",
     url: `https://nutritionix-api.p.rapidapi.com/v1_1/search/${searchKey}`,
