@@ -1,11 +1,13 @@
-const baseURL = "/api/";
-// const baseURL = "http://localhost:4000/api/";
+
+// const baseURL = "/api/";
+const baseURL = "http://localhost:4000/api/";
 let hitsArr = [] //this array holds the 10 displayed food objects on the page
 let foodList = []
 
 const getFoodList = () => {
   document.querySelector('.user-foods').innerHTML = ''
   axios.get(baseURL + 'food').then(res => {
+    console.log('foodlist', res.data)
     foodList = res.data
     let foodCard = document.createElement('ul')
     foodCard.className = 'food-list'
@@ -24,7 +26,9 @@ const getFoodList = () => {
 };
 
 //searches the api for food results based off keywords entered by the user, it then displays 10 foods along with their info and an add button
-const search = async() => {
+const search = async(e) => {
+  e.preventDefault()
+  hitsArr = []
   let searchKey = document.querySelector("#search-input").value;
   searchKey = searchKey.replace(/\s/g, "%20");
 
@@ -37,6 +41,9 @@ const search = async() => {
 
       //if statments display up to 10 foods search for by keyword. Add buttons are attached to each. obj created for each hit and pushed to global hitsArr
       document.querySelector('.hits-list').innerHTML = ''
+      if(document.querySelector('.food-list')) {
+        document.querySelector('.food-list').remove()
+      }
       let foodDiv = document.createElement('div')
       foodDiv.className = 'food-list'
 
@@ -76,7 +83,7 @@ const search = async() => {
       document.querySelector('.hits-list').append(foodDiv)
       let foodButton = document.querySelectorAll('.food-button')
       foodButton.forEach(ele => ele.addEventListener('click', addFood))
-
+      getFoodList()
     } catch (err) {
       console.log(err)
     }
@@ -165,6 +172,5 @@ const displayUser = () => {
     }
   }).catch(err => console.log(err))
 }
-
 document.querySelector("#user-button").addEventListener("click", createUser)
 document.querySelector("#search-button").addEventListener("click", search)
